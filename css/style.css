@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+:root {
+    /* project Colors */
+    --link-c: #474d75;
+    --dark-blue: #3a50f9;
+    --blue-sky: #3fb7fe;
+    --green: #3dd2ae;
+    /*old colors*/
+    --main-color: #333;
+    --yellow: #ffa731;
+    --orange: #fba61b;
+    --pink: #ee4dc6;
+    --soft-pink: #e1b7bf;
+    --dark-pink: #c262af;
+    --grey: #d4c7e8;
+    --red: #bf404c;
+    --soft-red:#ef5a60;
+    --violet: #6e00fd;
+    --black: #111;
+    --text-c: #555c66;
+    --bg-footer: #333;
+    --light-text: #808080;
+    --main-bg: #f5f7fa;/* icon bg */
+    --shadow: rgb(0 0 0 / 20%);
+    --input-border: #d9d9d9;
+    --link-bg: #b9c1cc;
+    --dark-grayish: #414c62;
+    --olive: #c4b35d;
+    --grey-80: #808080;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+@media (min-width: 922px) {
+    .container {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+header form input {
+    border: 1px solid white;
+}
+header .search input::placeholder {
+    color: var(--input-border);
+}
+header .search i {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-footer);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+header nav ul li a {
+    color: var(--footer-bg);
+}
+header nav ul li a:hover {
+    color: var(--light-text);
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+
+/* start landing*/
+.landing {
+    height: calc(100vh - 74px);
+    background-image: url("../images/landing.jpg");
+}
+.landing::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 20%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@media (min-width: 768px) {
+    .landing .container .bar {
+        left: -100px;
+    }
+}
+.landing .container .bar {
+    height: 20px;
+}
+.landing .container .info {
+    max-width: 500px;
+    bottom: 0;
+    right: 0;
+}
+@media (max-width: 767px) {
+    .landing .container .info h1 {
+        font-size: 30px !important;
+    }
+}
+.landing .container a:hover {
+    background-color: white;
+    color: var(--red);
+}
+/* end landing *
+
+/* top-university */
+@media (min-width: 768px) {
+    .top-university > div {
+        width: 50%;
+    }
+    .top-university .image {
+        overflow: visible;
+    }
+    .top-university .image img {
+        left: -70px;
+    }
+    .top-university .info {
+        padding-right: 100px !important;
+    }
+}
+.top-university .image img {
+    max-width: 100%;
+}
+.top-university .info h2,
+.top-university .info p {
+    max-width: 400px;
+}
+.top-university .info a:hover {
+    background-color: white;
+    color: var(--red);
+}
+/* top-university */
+
+/* slider */
+.slider .container .slide h3 {
+    max-width: 600px;
+}
+.slider .container .slide .image img {
+    max-width: 100%;
+}
+.slider .container .slide a {
+    max-width: 600px;
+    border-bottom: 1px solid var(--black);
+}
+.slider .container .slide a:hover {
+    color: var(--bg-footer);
+}
+/* slider */
+
+/* national-universities */
+@media (min-width: 768px) {
+    .national-universities > div {
+        width: 50%;
+    }
+    /* .national-universities .info {
+        align-self: center;
+    } */
+}
+.national-universities .image {
+    min-height: calc(100vh - 74px);
+    background-image: url("../images/camp-01.png");
+}
+.national-universities .info  a:hover {
+    color: var(--red);
+    background-color: white;
+}
+/* national-universities */
+
+/* news-website */
+
+@media (min-width: 768px) {
+    .news-website .container > div {
+        width: calc(50% - 15px);
+    }
+}
+.news-website .info  a:hover {
+    background-color: white;
+    color: var(--red);
+}
+.news-website .chanels .bar {
+    height: 20px;
+    max-width: 400px;
+}
+.news-website .chanels .dark-link:hover {
+    color: var(--red);
+}
+.news-website .chanels .red-link:hover {
+    color: var(--bg-footer);
+}
+/* news-website */
+
+/* bbc-two */
+.bbc-two {
+    height: calc(100vh - 74px);
+    background-image: url("../images/bbc.jpg");
+}
+.bbc-two::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bbc-two .container > p {
+    max-width: 600px;
+}
+.bbc-two .container .bar {
+    height: 20px;
+    width: 150px;
+}
+.bbc-two .container a:hover {
+    background-color: var(--red);
+}
+/* bbc-two */
+
+/* cumps */
+@media (max-width: 767px) {
+    .cumps {
+        grid-template-columns: minmax(250px, 1fr) !important;
+    }
+}
+.cumps .cump {
+    height: 500px;
+    background-image: url("../images/box-bg.jpg");
+    flex-direction: column;
+}
+.cumps .cump::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+}
+.cumps .cump a {
+    border-bottom: 1px dashed var(--red);
+}
+.cumps .cump a:hover {
+    color: var(--red);
+}
+/* cumps */
+
+/* moving */
+@media (min-width: 768px) {
+    .moving > div {
+        width: 50%;
+    }
+}
+@media (max-width: 767px) {
+    .moving .image {
+        order: 2;
+    }
+    .moving .container {
+        order: 1;
+    }
+}
+.moving .container a:hover {
+    background-color: white;
+    color: var(--red);
+}
+/* moving */
+
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+footer .social-media a:hover i {
+    color: var(--dark-grayish);
+}
+footer a:hover {
+    color: var(--dark-grayish);
+    text-decoration: underline;
+}
+/* end footer */
